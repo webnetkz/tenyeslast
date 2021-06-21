@@ -1,0 +1,31 @@
+@import url('./libs/scrollWhite.css');
+@import url('./../Gotham.ttf');
+* {
+    /* Переменные */
+    --transitionDuration: 500ms;
+
+    --colorZeroDark: rgb(255, 255, 255);
+    --colorOneDark: rgb(255, 255, 255);
+    --colorTwoDark: rgb(255, 255, 255);
+    --colorThreeDark: rgb(255, 255, 255);
+
+    --colorHeader: rgb(25, 50, 70);
+    --colorWhite: rgb(255, 255, 255);
+    --colorHalfWhite: rgb(185, 185, 185);
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: var(--transitionDuration);
+    outline: none;
+    transition-duration: 600ms;
+}
+html, body {
+    font-family: 'Gotham', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    display: flex;
+    font-weight: 100;
+    flex-direction: column;
+    justify-content: space-between;
+}
