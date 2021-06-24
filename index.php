@@ -28,8 +28,9 @@ require_once './app/libs/dev.php';
 				<img src="/public/img/wp.png" alt="whats app" class="h">
 				<p>Написать</p>
 			</div>
-			<div class="like forIcon">
+			<div class="like forIcon" onclick="openFavorites();">
 				<img src="/public/img/like.png" class="h">
+				<span class="counterLike"></span>
 				<p>Избранное</p>
 			</div>
 			<div class="cart forIcon" onclick="openCart();">
@@ -90,7 +91,7 @@ require_once './app/libs/dev.php';
 		<div class="component" style="visibility: hidden;">
 			<div>
 				<img src="/public/img/img.png" style="margin-right: 50px;" class="imgMore">
-				<div class="h likeImg">
+				<div class="h likeImg"  onclick="localStorage.setItem('l2', 1);  updateFavorites();  updateElementsFavorites('a2', 'l2');">
 					<img src="/public/img/likeWhite.png" style="width: 40px;">
 				</div>
 			</div>
@@ -147,6 +148,7 @@ require_once './app/libs/dev.php';
 				</div>
 			</div>
 		</div>
+		
 		<br><br><br><br>
 		<hr class="hr">
 
@@ -174,8 +176,9 @@ require_once './app/libs/dev.php';
 			</div>
 	<br><br><br>
 	</footer>
-
-
+<?php
+	require_once 'favorites.php';
+?>
 <?php
 	require_once 'cart.php';
 ?>

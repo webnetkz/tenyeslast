@@ -175,7 +175,7 @@ header {
     position: relative;
     left: -20px;
 }
-.showElems {
+.showElems, .showElemsFavorites {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -256,7 +256,7 @@ footer a {
         top: 0;
     }
 }
-#cart {
+#cart, #favorites {
     position: fixed;
     right: -500px;
     width: 350px;
@@ -303,7 +303,7 @@ footer a {
 .counter:hover {
     cursor: pointer;
 }
-.counterCart {
+.counterCart, .counterLike {
     color: #A6CE39;
     position: relative;
     top: -20px;

@@ -1,6 +1,6 @@
 <div id="cart">
 		<div style="display: flex; align-items: center;">
-			<img src="/public/img/arr.png" onclick="closeCart();" class="h"><span class="h" onclick="closeCart();" style="margin-left: 15px; font-size: 1.2rem;">Корзина</span> <span class="h" style="margin-left: 60px;padding: 8px; border: 2px solid black; border-radius: 5px;" onclick="localStorage.clear(); updateCounter(); updateCart(); document.querySelector('.showElems').innerHTML = '';">Очистить</span>
+			<img src="/public/img/arr.png" onclick="closeCart();" class="h"><span class="h" onclick="closeCart();" style="margin-left: 15px; font-size: 1.2rem;">Корзина</span> <span class="h" style="margin-left: 60px;padding: 8px; border: 2px solid black; border-radius: 5px;" onclick="localStorage.clear(); updateCounterFavorites(); updateFavorites(); document.querySelector('.showElems').innerHTML = '';">Очистить</span>
 		</div>
 
 		<div class="showElems">
@@ -56,11 +56,6 @@
 			</div>
 			<div style="display: flex; align-items: flex-end; position: relative; top: -10px;">
 				<p style="font-size: 1.3rem;">5000 тг.</p>
-				<div class="counter" style="margin-left: 30px; margin-bottom: 0;">
-					<span onclick="down(this)">-</span>
-					<span class="count" id="`+arg+`">`+res+`</span>
-					<span onclick="up(this)">+</span>
-				</div>
 			</div></div>`;
 			openCart();
 		}	

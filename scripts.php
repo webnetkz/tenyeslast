@@ -1,36 +1,69 @@
 <script>
 
-					function updateCounter() {
-						let allCounter = 0;
-						let cca = document.querySelector('.counterCart');
-						let a1 = localStorage.getItem('g1');
-							if(a1) {
-								allCounter += Number(a1);
-							}
-						let a2 = localStorage.getItem('g2');
-							if(a2) {
-								let a2 = localStorage.getItem('g2');
-								allCounter += Number(a2);
-							}
-						let a3 = localStorage.getItem('g3');
-							if(a2) {
-								let a3 = localStorage.getItem('g3');
-								allCounter += Number(a3);
-							}
-						let a4 = localStorage.getItem('g4');
-							if(a4) {
-								let a4 = localStorage.getItem('g4');
-								allCounter += Number(a4);
-							}
-						if(allCounter != 0) {
-							cca.innerText = allCounter;
-						} else {
-                            cca.innerText = '';
-                        }
-						orderPrice();
-					}
-					updateCounter();
-				</script>
+function updateCounter() {
+	let allCounter = 0;
+	let cca = document.querySelector('.counterCart');
+	let a1 = localStorage.getItem('g1');
+		if(a1) {
+			allCounter += Number(a1);
+		}
+	let a2 = localStorage.getItem('g2');
+		if(a2) {
+			let a2 = localStorage.getItem('g2');
+			allCounter += Number(a2);
+		}
+	let a3 = localStorage.getItem('g3');
+		if(a2) {
+			let a3 = localStorage.getItem('g3');
+			allCounter += Number(a3);
+		}
+	let a4 = localStorage.getItem('g4');
+		if(a4) {
+			let a4 = localStorage.getItem('g4');
+			allCounter += Number(a4);
+		}
+	if(allCounter != 0) {
+		cca.innerText = allCounter;
+	} else {
+        cca.innerText = '';
+    }
+	orderPrice();
+}
+updateCounter();
+
+function updateFavorites() {
+	let allCounter = 0;
+	let cca = document.querySelector('.counterLike');
+	let a1 = localStorage.getItem('l1');
+		if(a1) {
+			allCounter += Number(a1);
+		}
+	let a2 = localStorage.getItem('l2');
+		if(a2) {
+			let a2 = localStorage.getItem('l2');
+			allCounter += Number(a2);
+		}
+	let a3 = localStorage.getItem('l3');
+		if(a2) {
+			let a3 = localStorage.getItem('l3');
+			allCounter += Number(a3);
+		}
+	let a4 = localStorage.getItem('l4');
+		if(a4) {
+			let a4 = localStorage.getItem('l4');
+			allCounter += Number(a4);
+		}
+	if(allCounter != 0) {
+		cca.innerText = allCounter;
+	} else {
+        cca.innerText = '';
+    }
+	orderPriceFavorites();
+}
+updateFavorites();
+
+
+</script>
 <script>
 
 function closeCart() {
@@ -41,7 +74,14 @@ function openCart() {
     let cart = document.querySelector('#cart');
     cart.style.right = '0px';
 }
-
+function closeFavorites() {
+    let favorites = document.querySelector('#favorites');
+    favorites.style.right = '-500px';
+}
+function openFavorites() {
+    let favorites = document.querySelector('#favorites');
+    favorites.style.right = '0px';
+}
 function showI() {
     let content = document.querySelector('#threeSlide');
     document.querySelector('.dashActive').classList.remove('dashActive');
