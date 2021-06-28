@@ -143,7 +143,7 @@ require_once './app/libs/dev.php';
 			</div>
 			<div>
 				<img src="/public/img/img.png" style="margin-left: 50px;" class="imgMore">
-				<div class="h likeImg" style="margin-left: 50px;">
+				<div class="h likeImg" style="margin-left: 50px;" onclick="localStorage.setItem('l3', 1);  updateFavorites();  updateElementsFavorites('a3', 'l3');">
 					<img src="/public/img/likeWhite.png" style="width: 40px;">
 				</div>
 			</div>
@@ -184,6 +184,9 @@ require_once './app/libs/dev.php';
 ?>
 <?php
 	require_once 'modalShow.php';
+?>
+<?php
+	require_once 'modalOrder.php';
 ?>
 <?php
 	require_once 'scripts.php';

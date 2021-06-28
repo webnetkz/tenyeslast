@@ -308,4 +308,17 @@ footer a {
     position: relative;
     top: -20px;
     font-size: 0.8rem;
+    animation: showCounter 1s infinite;
+}
+.counterLike {
+    top: -22px;
+}
+@keyframes showCounter {
+    0% {
+        color: black;
+    }
+    50% {
+        text-shadow: 0 0 15px #A6CE39;
+
+    }
 }

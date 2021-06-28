@@ -1,6 +1,6 @@
 <div id="favorites">
 		<div style="display: flex; align-items: center;">
-			<img src="/public/img/arr.png" class="h" onclick="closeFavorites();"><span class="h" onclick="closeFavorites();" style="margin-left: 15px; font-size: 1.2rem;">Избраное</span> <span class="h" style="margin-left: 60px;padding: 8px; border: 2px solid black; border-radius: 5px;" onclick="localStorage.clear(); updateFavorites(); updateElemsFavorites(); document.querySelector('.showElemsFavorites').innerHTML = ' ';">Очистить</span>
+			<img src="/public/img/arr.png" class="h" onclick="closeFavorites();"><span class="h" onclick="closeFavorites();" style="margin-left: 15px; font-size: 1.2rem;">Избраное</span> <span class="h" style="margin-left: 60px;padding: 8px; border: 2px solid black; border-radius: 5px;" onclick="localStorage.clear(); updateFavorites(); updateElementsFavorites(); document.querySelector('.showElemsFavorites').innerHTML = ' ';">Очистить</span>
 		</div>
 
 		<div class="showElemsFavorites">
@@ -54,14 +54,7 @@
 				</p>
 				<img src="/public/img/close.png" style="height: 20px;" onclick="localStorage.removeItem('`+arg+`'); this.parentNode.parentNode.remove(); updateFavorites();">
 			</div>
-			<div style="display: flex; align-items: flex-end; position: relative; top: -10px;">
-				<p style="font-size: 1.3rem;">5000 тг.</p>
-				<div class="counter" style="margin-left: 30px; margin-bottom: 0;">
-					<span onclick="down(this)">-</span>
-					<span class="count" id="`+arg+`">`+res+`</span>
-					<span onclick="up(this)">+</span>
-				</div>
-			</div></div>`;
+            <br><hr style="border: 0.1px solid black;"><br></div>`;
 			openFavorites();
 		}	
 	}

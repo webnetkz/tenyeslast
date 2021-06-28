@@ -234,6 +234,23 @@ if(a4) {
     updateCart('a4', 'g4');
 }
 
+let l1 = localStorage.getItem('l1');
+if(l1) {
+    updateElementsFavorites('a1', 'l1');
+}
+let l2 = localStorage.getItem('l2');
+if(l2) {
+    updateElementsFavorites('a2', 'l2');
+}
+let l3 = localStorage.getItem('l3');
+if(l3) {
+    updateElementsFavorites('a3', 'l3');
+}
+let l4 = localStorage.getItem('l4');
+if(l4) {
+    updateElementsFavorites('a4', 'l4');
+}
+
 
 
 function up(elem) {
@@ -242,6 +259,7 @@ function up(elem) {
 	count = Number(count) + 1;
 	elem.previousSibling.previousSibling.innerText = count;
     orderPrice();
+    updateCounter();
 }
 function down(elem) {
 	let count = elem.nextSibling.nextSibling.innerText;
@@ -252,6 +270,7 @@ function down(elem) {
 	count = Number(count) - 1;
 	elem.nextSibling.nextSibling.innerText = count;
     orderPrice();
+    updateCounter();
 }
 </script>
 </body>
