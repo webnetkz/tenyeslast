@@ -10,6 +10,7 @@ require_once './app/libs/dev.php';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/public/styles/style.css">
+	<link rel="stylesheet" href="/public/styles/mStyle.css">
 	<title>Ten Yes</title>
 	<link type="image/png" sizes="96x96" rel="icon" href="favicon.png">
 </head>
@@ -17,6 +18,21 @@ require_once './app/libs/dev.php';
 	<div class="sliderBg sliderBg0">
 		
 	</div>
+
+	<header class="mheader">
+		<div class="logo h" onclick="location.href = '#'">
+			<img src="/public/img/logo.png" alt="ten yes logotype h" onclick="location.href = '#'">
+		</div>
+		<div class="mmenu">
+			<div class="cart forIcon" onclick="openCart();">
+				<img src="/public/img/cart.png" class="h mcarticon">
+				<span class="counterCart"></span>
+			</div>
+			<div class="menuitem forIcon" onclick="openMobileMenu();">
+				<img src="/public/img/menu.png" class="h mcarticon" style="padding-top: 5px;">
+			</div>
+		</div>
+	</header>
 	
 	<header>
 		<div class="logo h" onclick="location.href = '#'">

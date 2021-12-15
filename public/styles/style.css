@@ -1,5 +1,10 @@
 @import url('./libs/scrollWhite.css');
 @import url('./../Gotham.ttf');
+
+.mheader {
+    display: none;
+}
+
 * {
     /* Переменные */
     --transitionDuration: 500ms;
