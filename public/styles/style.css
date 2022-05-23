@@ -294,6 +294,9 @@ footer a {
     height: 650px;
     padding: 50px;
 }
+.imgShowModalCard {
+  margin-right: 30px;border-radius: 12px; background: url('/public/img/bg.jpg'); background-size: cover; min-width: 400px; margin-left: 40px; min-height: 500px; background-position: 50% 50%;
+}
 .counter {
     padding: 7px;
     border-radius: 6px;
@@ -326,4 +329,16 @@ footer a {
         text-shadow: 0 0 15px #A6CE39;
 
     }
+}
+.w25 {
+  width: 25%;
+}
+.w100 {
+  width: 100%;
+}
+.footer {
+  display: flex; justify-content: space-between;
+}
+.logoFooter {
+  width: 20%; height: 10%; margin-left: 5%; margin-right: 20%;
 }

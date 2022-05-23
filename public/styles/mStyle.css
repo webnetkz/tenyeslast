@@ -98,6 +98,42 @@
         display: flex;
         flex-direction: column; 
     }
-
-
+    .footer {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer > div {
+      width: 100%;
+    }
+    .logoFooter {
+      width: 50%;
+      margin-bottom: 2rem;
+    }
+    .imgMore {
+      margin-left: -2rem!important;
+      width: 130%!important;
+    }
+    .modalOne {
+      color: rgba(0, 0, 0, 0.9);
+      background: #d8d8d8;
+      border-radius: 12px;
+      width: 100%;
+      padding: 50px;
+      height: 100%!important;
+      overflow-y: auto;
+    }
+    .modalOne {
+      width: 100%;
+    }
+    .showModalCard {
+      flex-direction: column!important;
+    }
+    .showModalCard > div {
+      width: 100%!important;
+      margin-left: 0px!important;
+    }
+    .imgShowModalCard {
+      margin-bottom: 1rem;
+      margin-right: 0px;border-radius: 12px; background: url('/public/img/bg.jpg'); background-size: cover; min-width: 100%; margin-left: 0px; min-height: 300px; background-position: 50% 50%;
+    }
 }

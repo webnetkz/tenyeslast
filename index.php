@@ -86,7 +86,7 @@ require_once './app/libs/dev.php';
 		<br>
 		<br>
 		<div style="display: flex;" class="showBtns">
-			<div class="buy bord h" onclick="localStorage.setItem('g1', 1); updateCounter();  updateCart('a1', 'g1');">
+			<div class="buy bord h" onclick="localStorage.setItem('g1', 1); updateCounter();  updateCart('a1', 'g1'); modalClose();">
 				<img src="/public/img/cart.png" style="margin-right: 10px;">
 				Купить
 			</div>
@@ -168,9 +168,9 @@ require_once './app/libs/dev.php';
 		<br><br><br><br>
 		<hr class="hr">
 
-			<div style="display: flex; justify-content: space-between;">
-				<img src="/public/img/logo.png" alt="ten yes logotype h" style="width: 20%; height: 10%; margin-left: 5%; margin-right: 20%;" onclick="location.href = '#'">
-				<div style="width: 25%;">
+			<div class="footer">
+				<img src="/public/img/logo.png" alt="ten yes logotype h" class="logoFooter" onclick="location.href = '#'">
+				<div class="w25">
 					<p class="head">О компании</p>
 					<a href="#">О бренде</a>
 					<a href="#footer">Каталог</a>
@@ -178,13 +178,13 @@ require_once './app/libs/dev.php';
 					<a href="">Информация о доставке</a>
 					<a href="">Контакты</a>
 				</div>
-				<div style="width: 25%;">
+				<div class="w25">
 					<p class="head">Свяжитесь с нами</p>
 					<a href="#" style="display: flex; align-items: center;"><img src="/public/img/wp.png" ><span style="margin-left: 10px;">+7 777 123 4567</span></a>
 					<a href="#" style="display: flex; align-items: center;"><img src="/public/img/phone.png" style="width: 24px;" ><span style="margin-left: 10px;">+7 777 123 4567</span></a>
 					<a href="#" style="display: flex; align-items: center;"><img src="/public/img/mail.png" style="width: 24px;"><span style="margin-left: 10px;">tenyes@gmail.com</span></a>
 				</div>
-				<div style="width: 25%; display: flex; align-items: flex-end;">
+				<div  class="w25" style="display: flex; align-items: flex-end;">
 					<img src="/public/img/instagram.png" style="margin: 5px;" class="h">
 					<img src="/public/img/facebook.png" style="margin: 5px;" class="h">
 					<img src="/public/img/tiktok.png" style="margin: 5px;" class="h">

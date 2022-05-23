@@ -4,8 +4,8 @@
 			<h3>Быстрый просмотр</h5>
 			<img src="/public/img/close.png" style="float: right; width: 24px;" onclick="modalClose();">
 		</div>
-		<div style="display: flex; align-items: flex-start">
-			<div style="margin-right: 30px;border-radius: 12px; background: url('/public/img/bg.jpg'); background-size: cover; min-width: 400px; margin-left: 40px; min-height: 500px; background-position: 50% 50%;"></div>
+		<div style="display: flex; align-items: flex-start" class="showModalCard">
+			<div class="imgShowModalCard"></div>
 			<div style="width: 450px">
 				<h2 style="padding-bottom: 10px; border-bottom: 1px solid black; width: 100%;">TENYES SHAMPOO</h2>
 				<p style="font-size: 1.1rem; margin-top: 10px;">200 мл. 5000 тг</p>
@@ -17,7 +17,7 @@
 				</div>
 
 				<div style="display: flex;" class="showBtns">
-					<div class="buy bord h" style="color: white; background: black; border: 1px solid black;"  onclick="let g4 = document.querySelector('#count4').innerText;localStorage.setItem('g4', g4); updateCounter(); updateCart('a4', 'g4');">
+					<div class="buy bord h" style="color: white; background: black; border: 1px solid black;"  onclick="let g4 = document.querySelector('#count4').innerText;localStorage.setItem('g4', g4); updateCounter(); updateCart('a4', 'g4'); modalClose();">
 						<img src="/public/img/cart.png" style="margin-right: 10px; ">
 						Купить
 					</div>
