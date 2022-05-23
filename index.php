@@ -28,9 +28,9 @@ require_once './app/libs/dev.php';
 				<img src="/public/img/cart.png" class="h mcarticon">
 				<span class="counterCart"></span>
 			</div>
-			<div class="menuitem forIcon" onclick="openMobileMenu();">
+			<!-- <div class="menuitem forIcon" onclick="openMobileMenu();">
 				<img src="/public/img/menu.png" class="h mcarticon" style="padding-top: 5px;">
-			</div>
+			</div> -->
 		</div>
 	</header>
 	
@@ -173,10 +173,7 @@ require_once './app/libs/dev.php';
 				<div class="w25">
 					<p class="head">О компании</p>
 					<a href="#">О бренде</a>
-					<a href="#footer">Каталог</a>
-					<a href="">Политика безопасности</a>
-					<a href="">Информация о доставке</a>
-					<a href="">Контакты</a>
+					<a href="#footer">Контакты</a>
 				</div>
 				<div class="w25">
 					<p class="head">Свяжитесь с нами</p>
@@ -207,3 +204,84 @@ require_once './app/libs/dev.php';
 <?php
 	require_once 'scripts.php';
 ?>
+<style>
+.showLastModal {
+  position: fixed;
+  width: 60%;
+  height: 50%;
+  left: 20%;
+  top: 20%;
+  background: #DAD9D9;
+  border-radius: 7px;
+  padding: 1rem;
+  z-index: 9999999999999999999999;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.4);
+  transform: scale(0);
+}
+  .inp {
+    width: 100%;
+    border: 1px solid #000000;
+    font-size: 1.3rem;
+    padding: 3px;
+    background: #DAD9D9;
+    border-radius: 7px;
+  }
+  .lab {
+    display: block;
+    color: #000;
+    margin-top: 20px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+  .showLastModal {
+      position: fixed;
+      width: 90%;
+      height: 50%;
+      left: 5%;
+      top: 20%;
+      background: #DAD9D9;
+      border-radius: 7px;
+      padding: 1rem;
+      z-index: 9999999999999999999999;
+      box-shadow: 0 0 10px rgba(0,0,0, 0.4);
+      transform: scale(0);
+    }
+  }
+</style>
+<div class="showLastModal">
+  <img src="/public/img/close.png" style="float: right; width: 24px;" onclick="closeLastModal();">
+  <form action="send.php" method="POST">
+    <span class="lab">Имя</span>
+    <input type="text"  name="name" class="inp">
+    <span class="lab">Телефон</span>
+    <input type="text" class="inp" name="phone">
+    <span class="lab">Комментарий</span>
+    <textarea name="comment" id="" cols="30" rows="2" class="inp"></textarea>
+    <button class="bord" style="color: white; background: black; border: 1px solid black; font-size: 1.3rem; margin: 15px auto;" type="submit">Заказать</button>
+ 
+      <input type="text" name="g1" style="display: none" id="resG1" value="123">
+      <input type="text" name="g2" style="display: none" id="resG2">
+      <input type="text" name="g3" style="display: none" id="resG3">
+      <input type="text" name="g4" style="display: none" id="resG4">
+  </form>
+</div>
+<script>
+
+
+	function showLastModal() {
+		let m = document.querySelector('.showLastModal');
+    m.style.transform = 'scale(1)';
+
+    // Добавить в итоговую форму значения корзины
+    document.querySelector('#resG1').value = localStorage.getItem('g1');
+    document.querySelector('#resG2').value = localStorage.getItem('g2');
+    document.querySelector('#resG3').value = localStorage.getItem('g3');
+    document.querySelector('#resG4').value = localStorage.getItem('g4');
+
+	}
+
+  function closeLastModal() {
+    let m = document.querySelector('.showLastModal');
+    m.style.transform = 'scale(0)';
+  }
+</script>

@@ -273,6 +273,9 @@ footer a {
     display: flex;
     flex-direction: column;
 }
+#cart {
+  overflow-y: auto;
+}
 .mod {
     position: fixed;
     top: 0;
