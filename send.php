@@ -1,6 +1,9 @@
 <?php
 
 if(isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['phone']) && !empty($_POST['phone'])) {
+
+  require_once './app/libs/mailSender.php';
+
   $name = htmlentities($_POST['name']);
   $name = trim($name);
 
@@ -22,6 +25,15 @@ if(isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['phone']) && 
   if(isset($_POST['g4']) && !empty($_POST['g4'])) {
     $g4 = clearVar($_POST['g4']);
   }
+
+  send_mime_mail('Автор письма',
+               'info@tenyes.kz',
+               'Получатель письма',
+               'info@tenyes.kz',
+               'CP1251',  // кодировка, в которой находятся передаваемые строки
+               'KOI8-R', // кодировка, в которой будет отправлено письмо
+               'Письмо-уведомление',
+               "Здравствуйте, я Ваша программа!");
 
   echo '<script>location.href = "./index";</script>';
 } else {
