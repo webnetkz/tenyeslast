@@ -29,5 +29,3 @@ function mime_header_encode($str, $data_charset, $send_charset) {
   }
   return '=?' . $send_charset . '?B?' . base64_encode($str) . '?=';
 }
-
-
